@@ -17,7 +17,7 @@ const Search = ({setSearchResults}) => {
 
     const fetchSearchResults = async () => {
         setIsFetched(true);
-        const fetchResults = await fetch(`http://www.omdbapi.com/?apikey=3a21a13a&i&s=${searchText}&type=${searchType}`).then(res => res.json());
+        const fetchResults = await fetch(`https://www.omdbapi.com/?apikey=3a21a13a&i&s=${searchText}&type=${searchType}`).then(res => res.json());
         if(fetchResults.Response === 'True') {
             const results = fetchResults.Search;
             setIsError(false);
